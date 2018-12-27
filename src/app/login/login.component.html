@@ -1,0 +1,39 @@
+<div id="div_content" class="container">
+  <div class="center">
+    <form [formGroup]="loginForm">
+      <table class="tables">
+        <tr>
+          <td class="columnsHeader">
+            <label id="lbl_username" class="lbl_username" for="inp_username">User Name:</label>
+          </td>
+          <td>
+            <input id="inp_username" class="inp_username" type="text" formControlName="username">
+          </td>
+          <td>
+            <span class="errorMsg" *ngIf="loginForm.controls.username.touched && loginForm.controls.username.hasError('required')"> Please Enter userName</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="columnsHeader">
+            <label id="lbl_password" class="lbl_password" for="inp_username">Password:</label>
+          </td>
+          <td>
+            <input id="inp_password" class="inp_password" type="password" formControlName="password">
+          </td>
+          <td>
+            <span class="errorMsg" *ngIf="loginForm.controls.password.touched && loginForm.controls.password.hasError('required')"> Please Enter password</span>
+          </td>
+        </tr>
+       
+        <tr>
+          <td> </td>
+          <td>
+            <!-- <input id="btn_reset" class="btn reset" type="button" value="Reset"> -->
+            <input id="btn_submit" class="btn submit" type="button" value="Submit"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+    {{studentForm.value|json}}
+  </div>
+</div>

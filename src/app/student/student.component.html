@@ -1,0 +1,101 @@
+<div id="div_content" class="container">
+  <div class="center">
+    <form [formGroup]="studentForm">
+      <table class="tables">
+        <tr>
+          <td class="columnsHeader">
+            <label id="lbl_firstname" class="lbl_firstname" for="inp_username">First Name:</label>
+          </td>
+          <td>
+            <input id="inp_Firstname" class="inp_Firstname" type="text" formControlName="firstname">
+          </td>
+          <td>
+            <span class="errorMsg" *ngIf="studentForm.controls.firstname.touched && studentForm.controls.firstname.hasError('required')"> Please Enter Name</span>
+            <span class="errorMsg" *ngIf="studentForm.controls.firstname.touched && studentForm.controls.firstname.hasError('minlength')">Minimum length should be 5</span>
+            <span class="errorMsg" *ngIf="studentForm.controls.firstname.touched && studentForm.controls.firstname.hasError('maxlength')">Maximum length should be 25</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="columnsHeader">
+            <label id="lbl_lastname" class="lbl_lastname" for="inp_username">Last Name:</label>
+          </td>
+          <td>
+            <input id="inp_lastname" class="inp_lastname" type="text" formControlName="lastname">
+          </td>
+          <td>
+            <span class="errorMsg" *ngIf="studentForm.controls.lastname.touched && studentForm.controls.lastname.hasError('required')"> Please Enter Last Name</span>
+            <span class="errorMsg" *ngIf="studentForm.controls.lastname.touched && studentForm.controls.lastname.hasError('minlength')">Minimum length should be 5</span>
+            <span class="errorMsg" *ngIf="studentForm.controls.lastname.touched && studentForm.controls.lastname.hasError('maxlength')">Maximum length should be 25</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="columnsHeader">
+            <label id="lbl_age" class="lbl_age" for="inp_age">AGE:</label>
+          </td>
+          <td>
+            <input id="inp_age" class="inp_age" type="text" formControlName="age">
+          </td>
+          <td>
+            <span class="errorMsg" *ngIf="studentForm.controls.age.touched && studentForm.controls.age.hasError('required')"> Please Enter Age</span>
+            <span class="errorMsg" *ngIf="studentForm.controls.age.touched && studentForm.controls.age.hasError('min')">Minimum age should be 18</span>
+            <span class="errorMsg" *ngIf="studentForm.controls.age.touched && studentForm.controls.age.hasError('max')">Maximum age should be 150</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="columnsHeader">
+            <label id="lbl_email" class="lbl_email" for="inp_email">Email:</label>
+          </td>
+          <td>
+            <input id="inp_email" class="inp_email" type="text" formControlName="email">
+          </td>
+          <td>
+            <span class="errorMsg" *ngIf="studentForm.controls.email.touched && studentForm.controls.email.hasError('required')"> Please Enter Email</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="columnsHeader">
+            <label id="lbl_pswd" class="lbl_pswd" for="inp_pswd">password:</label>
+          </td>
+          <td>
+            <input id="inp_pswd" class="inp_pswd" type="password" formControlName="password">
+          </td>
+          <td>
+            <span class="errorMsg" *ngIf="studentForm.controls.password.touched && studentForm.controls.password.hasError('required')"> Please Enter password</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="columnsHeader">
+            <label id="lbl_joinDate" class="lbl_joinDate" for="inp_joindate">JoinDate:</label>
+          </td>
+          <td>
+            <input id="inp_joindate" class="inp_joindate" type="date" formControlName="joinDate">
+          </td>
+          <!-- <td>
+            <span class="errorMsg" *ngIf="studentForm.hasError('dateError')"> Please Enter JoinDate</span>
+          </td> -->
+        </tr>
+        <tr>
+          <td class="columnsHeader">
+            <label id="lbl_endDate" class="lbl_endDate" for="inp_enddate">EndDate:</label>
+          </td>
+          <td>
+            <input id="inp_enddate" class="inp_enddate" type="date" formControlName="endDate">
+          </td>
+          <td>
+            <span class="errorMsg" *ngIf="studentForm.hasError('dateError')"> Please Enter EndDate</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+
+          </td>
+          <td>
+            <input id="btn_reset" class="btn reset" type="button" value="Reset">
+            <input id="btn_submit" class="btn submit" type="button" value="Submit"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+    {{studentForm.value|json}}
+  </div>
+</div>

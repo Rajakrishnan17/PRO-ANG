@@ -1,0 +1,42 @@
+.container {
+    background-color: white;
+    padding-top: 60px;
+    width: 100%;
+    /* border: 1px solid #e5e5e5; */
+  }
+  
+  .center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 600px;
+    height: 150px;
+    background-color: #e5e5e5;
+    text-align: center;
+  }
+  
+  .tables {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .errorMsg {
+    color: red;
+  }
+  
+  .submit {
+    background-color: #0793d6;
+    width: 50%;
+  }
+  
+  .reset {
+    background-color: #888888;
+    margin-right: 10px !important;
+    width: 20%;
+  }
+  
