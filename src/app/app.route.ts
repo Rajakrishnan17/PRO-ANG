@@ -35,6 +35,5 @@ export const appRoutes: Routes = [
   {path: '*', component: ContentComponent},
   {path: '', component: ContentComponent},
   { path: 'sales',
-    loadChildren: './sales/sales.module#SalesModule'
-  }
+  loadChildren: './sales/sales.module#SalesModule'}
 ];
