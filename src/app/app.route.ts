@@ -12,10 +12,10 @@ import { AuthGuard } from './PermissionCheck/Auth.service';
 import { SpinnerComponent } from './spinner/spinner.component';
 
 export const appRoutes: Routes = [
-  {path: 'spinner', component: SpinnerComponent},
-  {path: 'login', component: LoginComponent,  canActivate: [AuthGuard]},
-  {path: 'student', data: { 'name': 'stringDatad'}, component: StudentComponent},
-  {path: 'student-list', component: StudentListComponent,
+  {path: 'spinner', data: { 'id': '1'}, component: SpinnerComponent},
+  {path: 'login', component: LoginComponent, canActivate: [AuthGuard]},
+  {path: 'student', data: { 'name': 'stringData'}, component: StudentComponent},
+  {path: 'student-list/:id', component: StudentListComponent,
     resolve: {
       studResolver: StudentResolver
     }
