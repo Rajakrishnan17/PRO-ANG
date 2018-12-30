@@ -9,7 +9,7 @@ import { ComplaintComponent } from './complaint/complaint.component';
 export const appSalesRoutes: Routes = [
   {path: '', component: SaleschartComponent},
   {path: '*', component: SaleschartComponent},
-  {path: 'dashbaord', component: SaleschartComponent},
+  {path: 'saleschart', component: SaleschartComponent},
   {path: 'order', component: OrderComponent},
   {path: 'invoice', component: InvoiceComponent},
   {path: 'feedback', component: FeedbackComponent},
