@@ -21,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { StudentResolver } from './_service/resolver/student_resolver.service';
 import { StudentmarkComponent } from './studentmark/studentmark.component';
 import { AuthGuard } from './PermissionCheck/Auth.service';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AuthGuard } from './PermissionCheck/Auth.service';
     StudentComponent,
     StudentListComponent,
     LoginComponent,
-    StudentmarkComponent
+    StudentmarkComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
